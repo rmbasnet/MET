@@ -10,6 +10,7 @@ export const getObjectIds = async () => {
 
 export const getObjectDetails = async (objectId) => {
     const response = await fetch(`${API_BASE}/objects/${objectId}`);
+    
     if (!response.ok) {
         throw new Error(`Failed to fetch details for object ${objectId}`);
     }

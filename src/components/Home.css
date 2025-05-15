@@ -1,8 +1,66 @@
 *{
-    margin: none;
+    background-color: #f3f3ff;
 }
 
-.firstDiv img{
-    height: 500px;
-    width: auto;
+.art-gallery {
+    background-color: chartreuse;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.art-gallery h1{
+    background-color: chartreuse;
+}
+
+.art-grid {
+    background-color: chartreuse;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.art-card {
+    background-color: greenyellow;
+    border: 1px solid #8d8181;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.art-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.art-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.no-image {
+    width: 100%;
+    height: 300px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+.art-info {
+    padding: 15px;
+}
+
+.art-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.art-info p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.9rem;
 }
