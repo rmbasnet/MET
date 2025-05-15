@@ -74,7 +74,7 @@ function Home() {
                 {/* ART CARD */}
                 {artworks.length > 0 ? (
                     artworks.map((artwork, index) => (
-                        <a href={artwork.objectURL}>
+                        <a href={artwork.objectURL} className='linkReference'>
                             <div key={index} className="art-card">
                                 {artwork.primaryImage ? (
                                     <img

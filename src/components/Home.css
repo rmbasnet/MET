@@ -21,6 +21,11 @@
     margin-top: 20px;
 }
 
+.art-grid .linkReference{
+    text-decoration: none;
+    color: black;
+}
+
 .art-card {
     background-color: greenyellow;
     border: 1px solid #8d8181;
@@ -31,7 +36,7 @@
 
 .art-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(51, 29, 29, 0.1);
 }
 
 .art-image {
