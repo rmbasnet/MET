@@ -1,8 +1,17 @@
-export const getData = async () => {
-    const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects`
-    // const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`
-    const response = await fetch(url);
-    const data = await response.json();
-    return data.objectIDs
-    // console.log(data)
-}
+const API_BASE = 'https://collectionapi.metmuseum.org/public/collection/v1';
+
+export const getObjectIds = async () => {
+    const response = await fetch(`${API_BASE}/objects`);
+    if (!response.ok) {
+        throw new Error('Failed to fetch object IDs');
+    }
+    return response.json();
+};
+
+export const getObjectDetails = async (objectId) => {
+    const response = await fetch(`${API_BASE}/objects/${objectId}`);
+    if (!response.ok) {
+        throw new Error(`Failed to fetch details for object ${objectId}`);
+    }
+    return response.json();
+};
